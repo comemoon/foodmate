@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/likefood"
+            android:icon="@drawable/likefood"
+            android:title="美食"/>
+        <item
+            android:id="@+id/like"
+            android:icon="@drawable/like"
+            android:title="收藏"/>
+        <item
+            android:id="@+id/dinary"
+            android:icon="@drawable/dinary"
+            android:title="个人日志"/>
+        <item
+            android:id="@+id/set"
+            android:icon="@drawable/set"
+            android:title="设置"/>
+    </group>
+
+</menu>

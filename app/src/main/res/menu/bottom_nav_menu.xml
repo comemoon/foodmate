@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/headview"
+        android:icon="@drawable/bigheadview"
+        android:title="首页"/>
+    <item
+        android:id="@+id/imagines"
+        android:icon="@drawable/bestimagine"
+        android:title="视频"/>
+    <item
+        android:id="@+id/flag"
+        android:icon="@drawable/flag"
+        android:title="目标"/>
+</menu>
