@@ -14,6 +14,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.example.foodmate.R;
 import com.example.foodmate.fragments.Pacfragment1.foodAPI.food_how;
+import com.example.foodmate.fragments.Pacfragment1.frag1_vewview;
 
 import java.util.List;
 
@@ -52,6 +53,14 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHold
 
             }
         });
+        holder.image3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(v.getContext(), frag1_vewview.class);
+                v.getContext().startActivity(intent);
+
+            }
+        });
 
         return  holder;
     }
@@ -73,6 +82,7 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHold
         ImageView imageView22;
         TextView textView;
         ImageView image2;
+        ImageView image3;
         String ii=new String();
 
         public ViewHolder(@NonNull View itemView) {
@@ -82,6 +92,7 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHold
             textView=itemView.findViewById(R.id.recycle_include);
             image2=itemView.findViewById(R.id.call);
             imageView22=itemView.findViewById(R.id.call);
+            image3=itemView.findViewById(R.id.share);
         }
     }
     public RecycleAdapter(List<recycleformation>recycleformationList){

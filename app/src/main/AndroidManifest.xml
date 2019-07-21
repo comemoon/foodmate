@@ -22,9 +22,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:targetApi="n">
+        <activity android:name=".fragments.Pacfragment1.frag1_vewview">
+        </activity>
         <activity android:name=".fragments.Pacfragment2.webviewfrag_2">
         </activity>
-        <activity android:name=".fragments.Pacfragment3.idea"
+        <activity
+            android:name=".fragments.Pacfragment3.idea"
             android:windowSoftInputMode="adjustPan|stateHidden">
         </activity>
         <activity android:name=".fragments.Pacfragment1.foodAPI.food_how">
@@ -42,9 +45,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:windowSoftInputMode="adjustPan|stateHidden">
-
         </activity>
 
         <provider
