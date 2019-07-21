@@ -1,4 +1,4 @@
-package com.example.foodmate.recyclepart;
+package com.example.foodmate.fragments.Pacfragment1.recyclepart;
 
 public class recycleformation {
     private int imageid;

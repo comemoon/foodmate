@@ -1,4 +1,4 @@
-package com.example.foodmate.fragments.Pacfragment1;
+package com.example.foodmate.fragments.Pacfragment1.foodAPI;
 
 import java.util.List;
 
@@ -46,6 +46,8 @@ public class JsonBean {
     public void setError_code(int error_code) {
         this.error_code = error_code;
     }
+
+
 
     public static class ResultBean {
         /**

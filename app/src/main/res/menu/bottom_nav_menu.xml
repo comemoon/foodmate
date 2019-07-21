@@ -4,7 +4,7 @@
     <item
         android:id="@+id/headview"
         android:icon="@drawable/bigheadview"
-        android:title="首页"/>
+        android:title="菜谱"/>
     <item
         android:id="@+id/imagines"
         android:icon="@drawable/bestimagine"
@@ -12,5 +12,5 @@
     <item
         android:id="@+id/flag"
         android:icon="@drawable/flag"
-        android:title="目标"/>
+        android:title="想法"/>
 </menu>

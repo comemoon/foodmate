@@ -58,6 +58,10 @@ public class singet extends AppCompatActivity {
 
 
                 }
+                else{
+                    Toast.makeText(singet.this, "两次密码不一致", Toast.LENGTH_SHORT).show();
+
+                }
 
 
             }

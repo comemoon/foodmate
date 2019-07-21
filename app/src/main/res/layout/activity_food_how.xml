@@ -4,15 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.Pacfragment1.food_how">
+    tools:context=".fragments.Pacfragment1.foodAPI.food_how">
 
+    <LinearLayout
+        android:id="@+id/foodlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/food_how"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="鱼香肉丝"
+            android:textSize="30sp"
+            android:layout_marginTop="80dp"
+            />
+
+        <TextView
+            android:id="@+id/burden"
+            android:textSize="22sp"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="食材：猪肉、黑木耳、玉兰片、葱、蒜、姜、泡辣椒、肉汤（或水）"/>
+
+        <TextView
+            android:id="@+id/steps"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="1.将泡发的黑木耳切丝，玉兰片（可选）切丝，猪瘦肉切丝，葱姜蒜切小粒，泡椒剁细；
+2.将肉丝用少许盐和淀粉将肉丝腌制五到十分钟，并将淀粉、盐、白糖、醋、生抽、肉汤（或水）兑成芡汁；
+3.热锅下冷油，油温热后，下肉丝迅速划炒散开；
+4.肉丝炒散至发白后，迅速放入姜、蒜米、泡椒；
+5.炒至出香味并呈红色时下葱花、木耳、豌豆尖、玉兰片炒匀；
+6.下芡汁收汁起锅即可。"/>
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>

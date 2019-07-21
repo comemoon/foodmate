@@ -1,4 +1,4 @@
-package com.example.foodmate.fragments.Pacfragment1;
+package com.example.foodmate.fragments.Pacfragment1.foodAPI;
 
 import android.app.Application;
 

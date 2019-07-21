@@ -1,7 +1,9 @@
-package com.example.foodmate.recyclepart;
+package com.example.foodmate.fragments.Pacfragment1.recyclepart;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,21 +11,26 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.foodmate.R;
-import com.example.foodmate.fragments.Pacfragment1.food_how;
+import com.example.foodmate.fragments.Pacfragment1.foodAPI.food_how;
 
 import java.util.List;
 
 public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHolder> {
     private List<recycleformation>mrecycleformation;
+    private Context mContext;
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
 
-        View view= LayoutInflater.from(viewGroup.getContext())
+        if(mContext==null){
+            mContext=viewGroup.getContext();
+        }
+        View view= LayoutInflater.from(mContext)
                 .inflate(R.layout.recyclelittlepart,viewGroup,false);
         final ViewHolder holder=new ViewHolder(view);
-        holder.fruitview.setOnClickListener(new View.OnClickListener() {
+        holder.imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(v.getContext(), food_how.class);
@@ -43,9 +50,6 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHold
                     holder.ii = "asd";
                 }
 
-
-
-
             }
         });
 
@@ -55,8 +59,8 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHold
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
         recycleformation mmformation=mrecycleformation.get(i);
-        viewHolder.imageView.setImageResource(mmformation.getImageid());
         viewHolder.textView.setText(mmformation.getName());
+        Glide.with(mContext).load(mmformation.getImageid()).into(viewHolder.imageView);
     }
     @Override
     public int getItemCount() {
@@ -64,7 +68,7 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHold
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {
-        View fruitview;
+        CardView cardView;
         ImageView imageView;
         ImageView imageView22;
         TextView textView;
@@ -73,7 +77,7 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHold
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            fruitview=itemView;
+            cardView=(CardView)itemView;
             imageView=itemView.findViewById(R.id.recycle_imageview);
             textView=itemView.findViewById(R.id.recycle_include);
             image2=itemView.findViewById(R.id.call);
