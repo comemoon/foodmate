@@ -15,8 +15,8 @@
     <application
         android:name=".fragments.Pacfragment1.foodAPI.MyApplication"
         android:allowBackup="true"
-        android:icon="@drawable/food3"
-        android:label="@string/app_name"
+        android:icon="@drawable/logo"
+        android:label="美食约会"
         android:networkSecurityConfig="@xml/allowinternet "
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"

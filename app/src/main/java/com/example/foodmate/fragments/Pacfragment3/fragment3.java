@@ -24,6 +24,7 @@ public class fragment3 extends Fragment {
     private FloatingActionButton button ;
     private Button button3;
     private LinearLayout my_layout;
+    private Button button4;
     private  int i=-1;
     private  int qqq=0;
     private ArrayList<TextView> editTexts=new ArrayList<>();
@@ -40,6 +41,7 @@ public class fragment3 extends Fragment {
         View view=inflater.inflate(R.layout.fragment_fragment3, container, false);
         button=view.findViewById(R.id.ddd);
         button3=view.findViewById(R.id.getnew);
+        button4=view.findViewById(R.id.delete);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,11 +62,23 @@ public class fragment3 extends Fragment {
 
             }
         });
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                deleteView();
+            }
+        });
 
 
 
         return view;
 
+    }
+    public void deleteView() {//删除edittext
+        TextView editText = editTexts.get(i);
+        my_layout.removeView(editText);
+        editTexts.remove(i);
+        i--;
     }
     public void  addView(){
 
@@ -76,12 +90,14 @@ public class fragment3 extends Fragment {
         Log.d("qwert","shu"+s);
         if(s!=null) {
             i++;
-            editText.setWidth(300);
-            editText.setHeight(100);
-            editText.setTextSize(25);
+            editText.setBackgroundResource(R.drawable.shape_edit2);
+            editText.setWidth(220);
+            editText.setHeight(150);
+            editText.setTextSize(23);
             editText.setText(s);
-            editText.setTop(100);
-            editText.setSingleLine(true);
+            editText.setGravity(20);
+            editText.setPadding(50,0,0,0);
+            //editText.setSingleLine(true);
             editText.setEllipsize(TextUtils.TruncateAt.valueOf("END"));
             editText.setMovementMethod(LinkMovementMethod.getInstance());
             editTexts.add(i,editText);
